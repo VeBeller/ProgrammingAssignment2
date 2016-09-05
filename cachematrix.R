@@ -1,6 +1,6 @@
-## The two function below can be used to calculate the inverse of a 2x2 matrix and cache the result for future use/reference
+## The two functions below can be used to calculate the inverse of a 2x2 matrix and cache the result for future use/reference
 
-## The function will always first check the cache to see whether the mean has already beeen calculated and stored
+## The function will always first check the cache to see whether the mean has already been calculated and stored.
 ## If the mean has already been stored in the cache, the inverse is retrieved from the cache,
 ## otherwise R will calculate the inverse using solve()
 
@@ -22,7 +22,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve uses an object created by makeCacheMatrix as input to calculate (or retrieve) the inverse of a matrix
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         i<-x$getinv()
         if(!is.null(i)){
           message("getting cached inverse matrix")
